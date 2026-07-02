@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - BAO Terre et Élevage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#2D6A4F"/><path d="M20 8c-4 4-8 8-8 14a8 8 0 0016 0c0-6-4-10-8-14z" fill="#fff"/></svg>
+                <div class="logo-text"><span class="logo-title">BAO</span><span class="logo-subtitle">TERRE ET ÉLEVAGE</span></div>
+            </a>
+            <button class="menu-toggle">☰</button>
+            <nav class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="services.html">Nos services</a>
+                <a href="about.html" class="active">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="forms.html" class="btn btn-primary">Demander un accompagnement</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        <section class="page-header">
+            <span class="section-label">À PROPOS</span>
+            <h1>À propos de BAO Terre et Élevage</h1>
+            <div class="section-divider"><span></span><svg viewBox="0 0 20 20" width="20" height="20"><path d="M10 4c-2 2-4 4-4 7a4 4 0 008 0c0-3-2-5-4-7z" fill="#2D6A4F"/></svg><span></span></div>
+        </section>
+
+        <div class="about-full">
+            <p class="lead">BAO Terre et Élevage est une entreprise spécialisée dans le conseil agricole, la formation et l'accompagnement administratif pour les éleveurs. Nous nous engageons à fournir des solutions complètes et personnalisées pour aider nos clients à atteindre leurs objectifs d'élevage de manière efficace et durable.</p>
+            
+            <p>Notre équipe d'experts possède une vaste expérience dans le domaine de l'agriculture et de l'élevage, ce qui nous permet de proposer des services adaptés aux besoins spécifiques de chaque éleveur. Que vous soyez un éleveur débutant ou expérimenté, nous sommes là pour vous accompagner à chaque étape de votre parcours.</p>
+            
+            <p>Chez BAO Terre et Élevage, nous croyons en l'importance de l'innovation et de la durabilité dans l'agriculture. Nous travaillons en étroite collaboration avec nos clients pour développer des stratégies efficaces qui favorisent la croissance et la réussite à long terme.</p>
+        </div>
+
+        <div class="mission-card full">
+            <div class="quote-mark">"</div>
+            <h2>Notre Mission</h2>
+            <p>Accompagner, former et soutenir les éleveurs pour une agriculture durable et performante.</p>
+            <svg class="leaf" viewBox="0 0 30 30" width="30" height="30"><path d="M15 5c-4 4-8 8-8 14a8 8 0 0016 0c0-6-4-10-8-14z" fill="#fff"/></svg>
+        </div>
+    </main>
+
+    <footer class="footer"><div class="container"><p>© 2026 BAO Terre et Élevage. Tous droits réservés.</p></div></footer>
+    <script>document.querySelector('.menu-toggle').addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('show'));</script>
+    <script src="script.js"></script>
+</body>
+</html>
