@@ -114,12 +114,14 @@ img { max-width: 100%; display: block; }
 }
 
 .menu-toggle {
-    display: none;
+    display: none; /* Caché sur PC */
     background: none;
     border: none;
-    font-size: 1.8rem;
+    font-size: 2rem; /* Taille de l'icône */
+    color: var(--color-primary); /* Vert foncé */
     cursor: pointer;
-    color: var(--color-primary);
+    padding: 5px;
+    line-height: 1;
 }
 
 /* =========================================
@@ -827,4 +829,10 @@ img { max-width: 100%; display: block; }
     .companion-form { padding: 24px; }
     .checkbox-group { grid-template-columns: 1fr; }
     .form-sidebar { flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Affiché sur mobile */
+    }
 }

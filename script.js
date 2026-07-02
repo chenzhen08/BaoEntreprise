@@ -23,38 +23,28 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function initMobileMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const navItems = document.querySelectorAll('.nav-links a');
+    const navLinks = document.querySelector('.nav-items');
+    const navItems = document.querySelectorAll('.nav-items a');
 
     if (!menuToggle || !navLinks) return;
 
-    // Toggle du menu
+    // Toggle du menu et de l'icône
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('show');
-        menuToggle.classList.toggle('active');
         
-        // Animation du burger (transformation en X)
-        const spans = menuToggle.querySelectorAll('span');
-        if (spans.length === 3) {
-            spans[0].style.transform = spans[0].classList.contains('active') 
-                ? 'rotate(45deg) translate(5px, 5px)' 
-                : 'none';
-            spans[1].style.opacity = spans[1].classList.contains('active') ? '0' : '1';
-            spans[2].style.transform = spans[2].classList.contains('active') 
-                ? 'rotate(-45deg) translate(7px, -6px)' 
-                : 'none';
+        // Change l'icône ☰ en ✕ et inversement
+        if (menuToggle.textContent.trim() === '') {
+            menuToggle.textContent = '✕';
+        } else {
+            menuToggle.textContent = '☰';
         }
-        
-        // Accessibilité
-        const isExpanded = navLinks.classList.contains('show');
-        menuToggle.setAttribute('aria-expanded', isExpanded);
     });
 
     // Fermeture du menu au clic sur un lien
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             navLinks.classList.remove('show');
-            menuToggle.classList.remove('active');
+            menuToggle.textContent = '☰'; // Remet le burger
         });
     });
 
@@ -62,7 +52,7 @@ function initMobileMenu() {
     document.addEventListener('click', (e) => {
         if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
             navLinks.classList.remove('show');
-            menuToggle.classList.remove('active');
+            menuToggle.textContent = '☰';
         }
     });
 }
@@ -491,16 +481,5 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-/**
- * ==========================================
- * GESTION DU MENU BURGER (HTML à ajouter)
- * ==========================================
- * Assure-toi que ton bouton burger a cette structure :
- * <button class="menu-toggle" aria-label="Menu">
- *     <span></span>
- *     <span></span>
- *     <span></span>
- * </button>
- */
 
 console.log('✅ BAO Terre et Élevage - JavaScript chargé avec succès');
